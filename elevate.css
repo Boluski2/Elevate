@@ -24,6 +24,26 @@
     transform: translate(-50%);
     z-index: 9999;
 }
+.Navbar-item {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  width: 95%;
+  border: 1.5px solid #B7410E;
+  height: 80px;
+  border-radius: 13px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999;
+}
+
+
+
 
 .navbar-log a{
     color: #B7410E;
@@ -32,12 +52,18 @@
     font-weight: 700;
 }
 
-.nav {
+/* .nav {
     display: grid;
     grid-template-columns: repeat(6, auto);
     grid-gap: 10px;
     list-style: none;
     align-items: center;
+} */
+.nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
 }
 
 .nav li {
@@ -45,19 +71,18 @@
 }
 
 .nav li a {
-    text-decoration: none;
-    color: #222;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    transition: all 0.2s ease-in-out;
-    white-space: nowrap;
+  text-decoration: none;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
-.nav li :hover{
-    color: #B7410E;
-    /* border-bottom: 1px solid #B7410E; */
-    border-radius: 4px;
+.nav li a:hover {
+  color: #B7410E;
+  border-radius: 4px;
 }
 
 a {
@@ -115,7 +140,7 @@ a {
 
 /************** END OF NAVBAR **********/
 
-.hero-section {
+/* .hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -124,14 +149,23 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+  } */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .text-content {
     max-width: 50%;
   }
   
-  .text-content h1 {
-    font-size: 36px;
+.text-content h1 {
+    font-size: 2.25rem;
     line-height: 1.4;
     margin-bottom: 20px;
   }
@@ -143,11 +177,11 @@ a {
     border-radius: 4px;
   }
   
-  .text-content p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
   
   .buttons {
     display: flex;
@@ -195,7 +229,6 @@ a {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
 
 
 /************** END OF HERO **********/
@@ -710,11 +743,15 @@ footer {
     }
 
 
-    .Navbar-item{
+    /* .Navbar-item{
         z-index: 99;
         justify-content: space-between;
+    } */
+    .Navbar-item {
+      flex-wrap: wrap;
+      padding: 10px;
+      height: auto;
     }
-
      .nav {
         display: flex;
         flex-direction: column;
@@ -723,18 +760,32 @@ footer {
         width: 100%;
         height: auto;
         position: absolute;
-        top: 0;
-        left: -100%;
+        left: 0;
+        top: 70px;
+        gap: 10px;
         opacity: 0;
         align-items: stretch;
         text-align: center;
-        padding: 80px 0 30px 0;
+        padding: 10px 0;
         margin: 0;
         transition: 0.2s ease-in-out;
         border-radius: 13px;
         z-index: 99;
         border: 1px solid #B7410E;
-    } 
+    }  
+     /* .nav {
+      flex-direction: column;
+      gap: 10px;
+      background: #fff;
+      width: 100%;
+      padding: 10px 0;
+      position: absolute;
+      left: 0;
+      top: 80px;
+      display: none;
+      z-index: 9999;
+      border: 1px solid #B7410E;
+    } */
 
     .nav li a{
         display: block;
@@ -748,20 +799,21 @@ footer {
 
     .menu-open-btn {
         display: block;
+        font-size: 1.6rem;
     }
 /************** END OF Navbar **********/
 
-    .hero-section {
+ 
+      .hero-section {
         flex-direction: column-reverse;
-        padding: 10px;
-        width: 100%;
+        padding: 20px;
       }
-
       .text-content {
-        max-width: 98%;
+        max-width: 100%;
       }
+    
       .image-content {
-        max-width: 98%;
+        max-width: 100%;
       }
       
 /************** END OF hero-section **********/
@@ -774,12 +826,18 @@ footer {
         margin-top: 0;
     }
 
+    .about_left h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
     .about_left p {
         line-height: 2.5;
     }
 
+    .about_left,
     .about_righ {
-        padding: 0 1rem;
+      padding: 1rem;
     }
 
 
@@ -900,4 +958,72 @@ form {
   .footer-left p {
     margin-bottom: 1rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .Sub_about {
+    grid-template-columns: 1fr;
+  }
+
+  .Main_section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Main_section {
+    grid-template-columns: 1fr;
+  }
+
+
+  
+}
+
+@media screen and (max-width: 1024px) {
+
+  .Main_section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 3rem;
+  }
+
+
+
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 50px 0;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+
+  .about_left {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 1rem;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .text-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .Main_section {
+    grid-template-columns:  1fr;
+    padding: 1rem;
+  }
+
+
 }
