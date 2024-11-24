@@ -157,7 +157,7 @@ a {
     padding: 50px;
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 100px auto 0;
   }
   
   .text-content {
@@ -899,17 +899,21 @@ footer {
 
     @media screen and (max-width: 568px) {
 
+      .hero-section {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
 .Sub_about {
-            display: flex;
             flex-direction: column-reverse;
             padding: 0;
     }
 
-.Main_section {
-            grid-template-columns: repeat(1, auto);
-            padding: 3rem 0;
-            margin: 0;
- }
+    .Main_section,
+    .blog-container {
+        grid-template-columns: 1fr;
+        padding: 1rem 0;
+    }
 
  /************** END OF Project-section **********/   
 
@@ -920,8 +924,11 @@ footer {
 }
 
 /* Portfolio Grid */
-.portfolio-grid {
+/* .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+} */
+.portfolio-grid {
+  grid-template-columns: 1fr;
 }
 
 /************** END OF portfolio **********/   
@@ -938,14 +945,13 @@ form {
 
   /************** END OF form-container **********/   
 
-.blog-container {
+/* .blog-container {
     grid-template-columns: 1fr;
-  }
+  } */
 
   .blog-section {
     text-align: center;
     padding: 0 12px;
-    background-color: #fdfdfd;
   }
   
   .blog-card {
@@ -981,6 +987,11 @@ form {
 
 @media screen and (max-width: 1024px) {
 
+  .hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
   .Main_section {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem 3rem;
@@ -988,7 +999,7 @@ form {
 
 
 
-  .hero-section {
+  /* .hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -996,7 +1007,7 @@ form {
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
-  }
+  } */
 
 
 
@@ -1026,4 +1037,11 @@ form {
   }
 
 
+}
+
+
+@media screen and (max-width: 1280px){
+  .hero-section {
+    padding: 120px 50px 0;
+}
 }
